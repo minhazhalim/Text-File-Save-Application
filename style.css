@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+* {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+     font-family: 'Poppins',sans-serif;
+}
+body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     padding: 10px;
+     background-color: #17A2B8;
+}
+.wrapper {
+     width: 443px;
+     border-radius: 7px;
+     background-color: #fff;
+     padding: 30px 25px 40px;
+     box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
+}
+.wrapper :where(textarea,input,select,button) {
+     width: 100%;
+     border: none;
+     border-radius: 5px;
+     outline: none;
+     font-size: 17px;
+}
+.wrapper :where(textarea,input)::placeholder {
+     color: #aaa;
+}
+.wrapper :where(textarea,input):focus {
+     box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+}
+.wrapper textarea {
+     height: 270px;
+     resize: none;
+     padding: 8px 13px;
+     font-size: 17.6px;
+     border: 1px solid #ccc;
+}
+.wrapper .file-options {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 10px;
+}
+.wrapper .file-options .option {
+     width: calc(100% / 2 - 8px);
+}
+.wrapper .file-options .option label {
+     font-size: 17px;
+}
+.wrapper .file-options .option :where(input,.select-menu) {
+     height: 50px;
+     margin-top: 6px;
+     padding: 0px 13px;
+     border: 1px solid #bfbfbf;
+     border-radius: 5px;
+}
+.wrapper .file-options .option .select-menu select {
+     height: 50px;
+     background: none;
+}
+.wrapper .save-button {
+     background-color: #17A2B8;
+     color: #fff;
+     cursor: pointer;
+     opacity: 0.6;
+     margin-top: 20px;
+     padding: 16px 0px;
+     pointer-events: none;
+}
+.wrapper .save-button:hover {
+     background-color: #148c9f;
+}
+textarea:valid ~ .save-button {
+     opacity: 1;
+     pointer-events: auto;
+     transition: all 0.3s ease;
+}
+@media only screen and (max-width:475px){
+     .wrapper {
+          padding: 25px 18px 30px;
+     }
+     .wrapper :where(textarea,input,select,button,label){
+          font-size: 16px !important;
+     }
+     .file-options .option {
+          width: calc(100% / 2 - 5px);
+     }
+     .option :where(input,.select-menu) {
+          padding: 0px 10px;
+     }
+     .wrapper .save-button {
+          padding: 15px 0px;
+     }
+}

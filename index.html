@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>Text File Saving Application</title>
+     <link rel="stylesheet" href="style.css">
+     <script src="script.js" defer></script>
+</head>
+<body>
+     <div class="wrapper">
+          <textarea spellcheck="false" placeholder="enter something to save">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsuam has been the industries standard dummy texts ever since this 1500s, when an unknown printer took a galley of type and scrambled it to make a type of dollar specimen book. it have survived not only five centuries, but also from the leap into electronic typesetting.</textarea>
+          <div class="file-options">
+               <div class="option file-name">
+                    <label>file name</label>
+                    <input type="text" spellcheck="false" placeholder="enter file name">
+               </div>
+               <div class="option save-as">
+                    <label>save as</label>
+                    <div class="select-menu">
+                         <select>
+                              <option value="text/plain">text file (.txt)</option>
+                              <option value="text/javascript">js file (.js)</option>
+                              <option value="text/html">html file (.html)</option>
+                              <option value="image/svg+xml">svg file (.svg)</option>
+                              <option value="application/msword">doc file (.doc)</option>
+                              <option value="application/vnd.ms-powerpoint">ppt file (.ppt)</option>
+                         </select>
+                    </div>
+               </div>
+          </div>
+          <button type="button" class="save-button">save as text file</button>
+     </div>
+</body>
+</html>
